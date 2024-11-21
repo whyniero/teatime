@@ -46,6 +46,10 @@ p {
   font-size: 1.125rem;
 }
 
+.logo-img {
+  width: 50px;
+}
+
 .yellow-txt {
   color: var(--color-yellow);
 }
