@@ -1,0 +1,664 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --color-green: #1a3c40;
+  --color-milk: #f5f5f5;
+  --color-dark-milk: #c4c4c4;
+  --color-yellow: #d4af37;
+  --color-dark-yellow: #b2922a;
+}
+
+body {
+  background-color: var(--color-milk);
+}
+
+* {
+  font-family: "Jost", serif;
+}
+
+section {
+  padding: 80px 0;
+}
+
+h1 {
+  font-family: "Cormorant Infant", serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+}
+h2 {
+  font-family: "Cormorant Infant", serif;
+  font-size: 3.25rem;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1.125rem;
+}
+
+.yellow-txt {
+  color: var(--color-yellow);
+}
+
+.green-txt {
+  color: var(--color-green);
+}
+
+.btn-yellow {
+  height: 60px;
+  padding: 10px 30px;
+  font-family: "Jost", serif;
+  font-size: 1.625rem;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  position: relative;
+  outline: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--color-yellow);
+  border: none;
+  z-index: 1;
+}
+.btn-yellow:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: var(--color-dark-yellow);
+  transition: all 0.5s ease;
+}
+
+.btn-milk {
+  height: 50px;
+  padding: 10px 18px;
+  font-family: "Jost", serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: #0c0c0c;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  position: relative;
+  outline: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: start;
+
+  background: var(--color-milk);
+  border: none;
+  z-index: 1;
+}
+.btn-milk:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: var(--color-dark-milk);
+  transition: all 0.5s ease;
+}
+
+.btn-green {
+  height: 44px;
+  padding: 10px 18px;
+  font-family: "Jost", serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  position: relative;
+  outline: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: start;
+
+  background: var(--color-green);
+  border: none;
+  z-index: 1;
+}
+.btn-green:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: var(--color-yellow);
+  transition: all 0.5s ease;
+}
+
+.btn-milk:hover:after,
+.btn-yellow:hover:after,
+.btn-green:hover:after {
+  top: auto;
+  bottom: 0;
+  height: 100%;
+}
+.btn-milk:active,
+.btn-yellow:active,
+.btn-green:active {
+  top: 2px;
+}
+
+
+.main {
+  padding-top: 0;
+  background-image: url(../img/section-main.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main {
+  height: 1000px;
+}
+
+
+.navbar img {
+  width: 40px;
+}
+
+.anim-link {
+  font-size: 1.25rem;
+  font-weight: normal;
+  color: white;
+  position: relative;
+  width: max-content;
+}
+
+.anim-link:after {
+  content: "";
+  background-color: var(--color-yellow);
+  height: 2px;
+  width: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s ease-out;
+}
+
+.anim-link:hover {
+  color: var(--color-yellow);
+}
+
+.anim-link:hover:after {
+  width: 100%;
+  transition: 0.3s ease;
+}
+
+.main h1 {
+  padding-top: 150px;
+}
+
+.main h1 span {
+  font-family: "Cormorant Infant", serif;
+}
+
+.main .btn-yellow {
+  margin-top: 72px;
+}
+
+.our-teas {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.our-teas h5 {
+  color: var(--color-yellow);
+}
+
+.grid {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.custom-card {
+  width: 430px;
+  height: 380px;
+  overflow: hidden;
+  border: none;
+  border-radius: 0;
+  position: relative;
+  background-image: url(../img/img.jpg);
+}
+
+.custom-card .btn-milk {
+  margin-top: 60px;
+}
+
+.custom-card .inner-content {
+  color: white;
+  width: 100%;
+  padding: 0 10%;
+  height: 128%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  padding-top: 220px;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to top, #1a3c40, #1a3c40a7, #439ca600);
+  transition: all 0.3s ease-out;
+}
+
+.inner-content > * {
+  text-align: center;
+}
+
+.custom-card:hover > * {
+  padding-top: 110px;
+  top: -28%;
+  background-color: #1a3c40;
+  transition: all 0.4s ease;
+}
+
+.our-teas .btn-yellow {
+  margin-top: 60px;
+}
+
+.why-we-are {
+  background-color: var(--color-green);
+  color: white;
+}
+
+.why-we-are .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.why-we-are img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 12px;
+}
+
+.why-we-are h2 {
+  margin-bottom: 60px;
+}
+
+.why-we-are h3 {
+  font-weight: 500;
+  color: var(--color-yellow);
+}
+
+.why-we-are .block {
+  margin-bottom: 20px;
+}
+
+.history {
+  background-image: url(../img/history-img.jpg);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.history h2 span {
+  font-family: "Cormorant Infant", serif;
+}
+
+.our-blog {
+  background-color: var(--color-green);
+}
+
+.our-blog .photos {
+  margin-top: 60px;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.photos .photo {
+  width: 316px;
+}
+
+.contact-us {
+  background-image: url(../img/contact-img.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contact-us .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-us .block {
+  width: 44%;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  background-color: rgba(26, 60, 64, 0.8);
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 1.125rem;
+  background: var(--color-milk);
+  color: #333;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+input {
+  height: 50px;
+}
+
+input:focus {
+  outline: 4px solid var(--color-yellow);
+  transition: 0.3s ease;
+}
+
+textarea:focus {
+  outline: 4px solid var(--color-yellow);
+  transition: 0.3s ease;
+}
+
+footer {
+  background-color: var(--color-green);
+  padding: 40px 0;
+  color: white;
+  font-weight: 300;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav2 {
+  background-color: var(--color-green);
+  box-shadow: 0 4px 10px rgb(12, 12, 12, 0.5);
+}
+
+.items {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.item * {
+  margin-bottom: 12px;
+}
+
+.name,
+.price {
+  font-weight: 800;
+}
+
+.input-group {
+  padding: 0 20%;
+}
+
+.form-control {
+  border-radius: 0;
+  height: 50px;
+  border-color: var(--color-yellow);
+  border-width: 2px;
+}
+
+.form-select {
+  width: 100%;
+  text-align: start;
+  height: 50px;
+  padding: 0 12px;
+  font-family: "Jost", serif;
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: var(--color-green);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 0;
+  background-color: white;
+}
+
+.btn-sort {
+  width: 100%;
+  text-align: start;
+  height: 50px;
+  padding: 0 12px;
+  font-family: "Jost", serif;
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: var(--color-green);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: white;
+}
+
+.card {
+  width: 100%;
+  border-radius: 0;
+  margin-bottom: 22px;
+}
+
+@media (max-width: 1400px) {
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 14px;
+  }
+  .contact-us .block {
+    width: 60%;
+  }
+
+  .main {
+    height: 800px;
+  }
+}
+
+@media (max-width: 992px) {
+  .anim-link {
+    color: var(--color-green);
+  }
+  .custom-card {
+    width: 380px;
+    height: 360px;
+  }
+
+  .history {
+    background-image: none;
+  }
+
+  footer .container {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .input-group {
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-we-are .block {
+    text-align: center;
+  }
+
+  .items {
+    margin-top: 40px;
+  }
+
+  .custom-card {
+    width: 300px;
+    height: 280px;
+  }
+
+  .btn-yellow {
+    height: 50px;
+  }
+
+  .btn-milk {
+    height: 40px;
+  }
+
+  .custom-card .inner-content {
+    padding: 0 6%;
+    height: 160%;
+    display: flex;
+    padding-top: 290px;
+  }
+
+  .custom-card .inner-content h5 {
+    margin-bottom: 50px;
+    transition: 0.4s ease-out;
+  }
+
+  .custom-card .btn-milk {
+    margin-top: 24px;
+  }
+
+  .custom-card:hover > * {
+    padding-top: 0px;
+  }
+
+  .custom-card:hover .inner-content h5 {
+    margin-bottom: 10px;
+    transition: 0.3s ease;
+  }
+
+  .contact-us .block {
+    width: 100%;
+  }
+
+  input {
+    height: 30px;
+  }
+}
+
+@media (max-width: 380px) {
+  html {
+    font-size: 12px;
+  }
+
+  section {
+    padding: 40px 0;
+  }
+
+  .main {
+    height: 600px;
+  }
+
+  .main h1 {
+    padding-top: 50px;
+  }
+
+  .our-teas .btn-yellow {
+    margin-top: 32px;
+  }
+
+  .custom-card {
+    width: 100%;
+  }
+
+  .custom-card .inner-content {
+    padding-top: 260px;
+  }
+
+  .custom-card:hover > * {
+    padding-top: 0px;
+  }
+
+  .btn-yellow {
+    height: 40px;
+  }
+
+  .btn-milk {
+    height: 30px;
+  }
+
+  .photos .photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .photos .photo img {
+    width: 90%;
+  }
+  .navbar img {
+    width: 80%;
+  }
+
+  .form-select {
+    height: 36px;
+  }
+
+  .btn-sort {
+    height: 36px;
+    padding: 0 12px;
+    font-size: 1.125rem;
+  }
+
+  .btn-green {
+    height: 36px;
+  }
+
+  .items {
+    margin-top: 32px;
+  }
+
+  .item {
+    margin-bottom: 28px;
+  }
+
+  .item img {
+    width: 80%;
+  }
+}
